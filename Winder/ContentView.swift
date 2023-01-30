@@ -15,11 +15,14 @@ struct ContentView: View {
             
             VStack {
                 Text("Winder")
-                    .bold()
-                    .font(.system(size: 50))
-                    .foregroundColor(.white)
-                    .padding(.bottom, 300)
+                    .padding(.bottom, 30)
+                Image(systemName: "figure.walk")
+                        .foregroundColor(.white)
             }
+            .bold()
+            .font(.system(size: 50))
+            .foregroundColor(.white)
+            .padding(.bottom, 300)
         }
     }
 }
