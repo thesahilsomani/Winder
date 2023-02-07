@@ -1,37 +1,5 @@
-//
-//  ContentView.swift
-//  Winder
-//
-//  Created by Sahil Somani on 1/27/23.
-//
-
 import SwiftUI
 
-
-struct CustomColor {
-    static let customLightBlue = Color("customLightBlue")
-}
-
-
-struct LaunchView: View {
-    var body: some View {
-        ZStack {
-            CustomColor.customLightBlue
-                .ignoresSafeArea()
-            
-            VStack {
-                Text("Winder")
-                    .padding(.bottom, 30)
-                Image(systemName: "figure.walk")
-                        .foregroundColor(.white)
-            }
-            .bold()
-            .font(.system(size: 50))
-            .foregroundColor(.white)
-            .padding(.bottom, 300)
-        }
-    }
-}
 
 struct WalkView : View
 {
@@ -63,6 +31,7 @@ struct SettingsView : View
     }
 }
 
+
 struct TabsView: View
 {
     var body: some View
@@ -93,9 +62,8 @@ struct TabsView: View
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
         TabsView()
     }
 }
