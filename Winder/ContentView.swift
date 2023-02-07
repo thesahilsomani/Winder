@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+
+struct CustomColor {
+    static let customLightBlue = Color("customLightBlue")
+}
+
+
 struct LaunchView: View {
     var body: some View {
         ZStack {
-            Color.blue
+            CustomColor.customLightBlue
                 .ignoresSafeArea()
             
             VStack {
