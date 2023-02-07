@@ -1,4 +1,5 @@
 import SwiftUI
+import HealthKit
 
 
 struct CustomColor {
@@ -44,6 +45,9 @@ struct SplashPopupView: View {
                         .padding(.bottom, 300)
                 
                 Button {
+                    let healthStore = HKHealthStore()
+                    let allTypes = Set([HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier .stepCount)!])
+                    healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in}
                     shouldShowOnboarding.toggle()
                 } label: {
                     Text("Get Started")
