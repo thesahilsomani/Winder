@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BA0723B2298F10E00006962A /* HealthAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0723B1298F10E00006962A /* HealthAPITests.swift */; };
+		BA40449829A82D5700825B9A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40449729A82D5700825B9A /* Persistence.swift */; };
+		BA40449C29A831C400825B9A /* WalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40449B29A831C400825B9A /* WalkView.swift */; };
+		BA40449E29A831CE00825B9A /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40449D29A831CE00825B9A /* ActivityView.swift */; };
+		BA4044A029A83E4A00825B9A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA40449F29A83E4A00825B9A /* LocationManager.swift */; };
+		BA54CCE0299B159100031A76 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA54CCDF299B159100031A76 /* SettingsView.swift */; };
+		BA54CCE2299B18F200031A76 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA54CCE1299B18F200031A76 /* Settings.bundle */; };
+		BA54E3C629959355002D54DD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA54E3C429959355002D54DD /* Model.xcdatamodeld */; };
+		BA54E3C729959355002D54DD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA54E3C429959355002D54DD /* Model.xcdatamodeld */; };
+		BA54E3C829959355002D54DD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA54E3C429959355002D54DD /* Model.xcdatamodeld */; };
 		BA89FB342984D2BE002DA24F /* WinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89FB332984D2BE002DA24F /* WinderApp.swift */; };
 		BA89FB362984D2BE002DA24F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89FB352984D2BE002DA24F /* SplashView.swift */; };
 		BA89FB382984D2BF002DA24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA89FB372984D2BF002DA24F /* Assets.xcassets */; };
@@ -39,6 +48,13 @@
 		BA0723B1298F10E00006962A /* HealthAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAPITests.swift; sourceTree = "<group>"; };
 		BA0723B3298F1DAE0006962A /* Winder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Winder.entitlements; sourceTree = "<group>"; };
 		BA0723B8298F22CD0006962A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA40449729A82D5700825B9A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		BA40449B29A831C400825B9A /* WalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkView.swift; sourceTree = "<group>"; };
+		BA40449D29A831CE00825B9A /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		BA40449F29A83E4A00825B9A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BA54CCDF299B159100031A76 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BA54CCE1299B18F200031A76 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BA54E3C529959355002D54DD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BA89FB302984D2BE002DA24F /* Winder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA89FB332984D2BE002DA24F /* WinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinderApp.swift; sourceTree = "<group>"; };
 		BA89FB352984D2BE002DA24F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -80,6 +96,7 @@
 		BA89FB272984D2BE002DA24F = {
 			isa = PBXGroup;
 			children = (
+				BA54E3C429959355002D54DD /* Model.xcdatamodeld */,
 				BA89FB322984D2BE002DA24F /* Winder */,
 				BA89FB432984D2BF002DA24F /* WinderTests */,
 				BA89FB4D2984D2BF002DA24F /* WinderUITests */,
@@ -105,8 +122,14 @@
 				BA89FB332984D2BE002DA24F /* WinderApp.swift */,
 				BA89FB352984D2BE002DA24F /* SplashView.swift */,
 				EFE2EA452991E3CA00F676B1 /* HomeView.swift */,
+				BA40449B29A831C400825B9A /* WalkView.swift */,
+				BA40449D29A831CE00825B9A /* ActivityView.swift */,
+				BA54CCDF299B159100031A76 /* SettingsView.swift */,
+				BA40449F29A83E4A00825B9A /* LocationManager.swift */,
 				BA89FB372984D2BF002DA24F /* Assets.xcassets */,
+				BA40449729A82D5700825B9A /* Persistence.swift */,
 				BA89FB392984D2BF002DA24F /* Preview Content */,
+				BA54CCE1299B18F200031A76 /* Settings.bundle */,
 			);
 			path = Winder;
 			sourceTree = "<group>";
@@ -242,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA89FB3B2984D2BF002DA24F /* Preview Assets.xcassets in Resources */,
+				BA54CCE2299B18F200031A76 /* Settings.bundle in Resources */,
 				BA89FB382984D2BF002DA24F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,9 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA40449829A82D5700825B9A /* Persistence.swift in Sources */,
 				BA89FB362984D2BE002DA24F /* SplashView.swift in Sources */,
 				EFE2EA462991E3CA00F676B1 /* HomeView.swift in Sources */,
+				BA54CCE0299B159100031A76 /* SettingsView.swift in Sources */,
 				BA89FB342984D2BE002DA24F /* WinderApp.swift in Sources */,
+				BA40449E29A831CE00825B9A /* ActivityView.swift in Sources */,
+				BA40449C29A831C400825B9A /* WalkView.swift in Sources */,
+				BA54E3C629959355002D54DD /* Model.xcdatamodeld in Sources */,
+				BA4044A029A83E4A00825B9A /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +309,7 @@
 			files = (
 				BA0723B2298F10E00006962A /* HealthAPITests.swift in Sources */,
 				BA89FB452984D2BF002DA24F /* WinderTests.swift in Sources */,
+				BA54E3C729959355002D54DD /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +319,7 @@
 			files = (
 				BA89FB4F2984D2BF002DA24F /* WinderUITests.swift in Sources */,
 				BA89FB512984D2BF002DA24F /* WinderUITestsLaunchTests.swift in Sources */,
+				BA54E3C829959355002D54DD /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +635,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA54E3C429959355002D54DD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA54E3C529959355002D54DD /* Model.xcdatamodel */,
+			);
+			currentVersion = BA54E3C529959355002D54DD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA89FB282984D2BE002DA24F /* Project object */;
 }

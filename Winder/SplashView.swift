@@ -1,19 +1,20 @@
 import SwiftUI
 import HealthKit
-
+import CoreData
 
 struct CustomColor {
     static let customLightBlue = Color("customLightBlue")
 }
 
-
 struct SplashView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @State var shouldShowOnboarding: Bool = true
 
     var body: some View {
         NavigationView {
             TabsView()
                 .navigationTitle("Home")
+                .environment(\.managedObjectContext, viewContext)
         }
         .fullScreenCover(isPresented: $shouldShowOnboarding) {
             SplashPopupView(shouldShowOnboarding: $shouldShowOnboarding)
@@ -21,29 +22,28 @@ struct SplashView: View {
     }
 }
 
-
 struct SplashPopupView: View {
     @Binding var shouldShowOnboarding: Bool
-    
+
     var body: some View {
         ZStack {
             CustomColor.customLightBlue
                 .ignoresSafeArea()
-            
+
             VStack {
                 Text("Winder")
                     .padding(.bottom, 30)
                     .bold()
                     .font(.system(size: 50))
                     .foregroundColor(.white)
-                
+
                 Image(systemName: "figure.walk")
                         .foregroundColor(.white)
                         .bold()
                         .font(.system(size: 50))
                         .foregroundColor(.white)
                         .padding(.bottom, 300)
-                
+
                 Button {
                     let healthStore = HKHealthStore()
                     let allTypes = Set([HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier .stepCount)!])
@@ -60,7 +60,6 @@ struct SplashPopupView: View {
                                 .stroke(Color.white, lineWidth: 2)
                         )
                 }
-
             }
         }
     }
