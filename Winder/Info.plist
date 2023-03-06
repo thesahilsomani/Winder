@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We would like to know your location... :)</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We would like to know your location... :)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Location is needed to find walks near you.</string>
+	<string>We would like to know your location... :)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
