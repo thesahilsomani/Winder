@@ -100,6 +100,37 @@ struct WalkView : View
         } catch { print("Failed to add Rating to CoreData") }
     }
     
+    func clearLocationRatings() -> Void {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Destination")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try viewContext.fetch(request) as! [Destination]
+            for i in 0..<(result.count) {
+                result[i].rating = 0
+                try viewContext.save()
+            }
+        } catch { print("Failed to reset Ratings in CoreData") }
+    }
+    
+    private func getTimeFilter() -> MKPointOfInterestFilter {
+        let components = Calendar.current.dateComponents([.hour], from: Date())
+        let hour = components.hour ?? 0
+        // let parks = [1,2,3,4,5,6,10,23,0]
+        let restaurants = [7,8,9,11,12,13,19,20]
+        let stores = [14,15,16,17,18]
+        let dessert = [21,22]
+    
+        if restaurants.contains(hour) {
+            return MKPointOfInterestFilter(including: [.restaurant])
+        } else if stores.contains(hour) {
+            return MKPointOfInterestFilter(including: [.store])
+        } else if dessert.contains(hour) {
+            return MKPointOfInterestFilter(including: [.bakery,.cafe])
+        } else {
+            return MKPointOfInterestFilter(including: [.park])
+        }
+    }
+    
     private func getDestinations(steps: Double) async -> [MKMapItem] {
         guard let location = locationManager.location else {
                 print("Location is nil!")
@@ -112,8 +143,9 @@ struct WalkView : View
         let lowerRadiusRequest = MKLocalPointsOfInterestRequest(center: location.coordinate, radius: lowerRadius)
         let higherRadiusRequest = MKLocalPointsOfInterestRequest(center: location.coordinate, radius: higherRadius)
         
-        higherRadiusRequest.pointOfInterestFilter = MKPointOfInterestFilter(including: [.restaurant])
-        lowerRadiusRequest.pointOfInterestFilter = MKPointOfInterestFilter(including: [.restaurant])
+        let filter = getTimeFilter()
+        higherRadiusRequest.pointOfInterestFilter = filter
+        lowerRadiusRequest.pointOfInterestFilter = filter
         
         let higherRadiusSearch = MKLocalSearch(request: higherRadiusRequest)
         let lowerRadiusSearch = MKLocalSearch(request: lowerRadiusRequest)
