@@ -3,11 +3,27 @@ import UIKit
 import SwiftUI
 import CoreData
 
+
+
 struct SettingsView: View {
+    
+    
     @Environment(\.managedObjectContext) private var viewContext
     @State private var selection = "Miles"
     @State private var enteredText = ""
     let goalTypes = ["Miles", "Kilometers", "Steps"]
+    
+    func clearLocationRatings() -> Void {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Destination")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try viewContext.fetch(request) as! [Destination]
+            for i in 0..<(result.count) {
+                result[i].rating = 0
+                try viewContext.save()
+            }
+        } catch { print("Failed to reset Ratings in CoreData") }
+    }
     
     func setStepGoal(goal: Int32) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "StaticUserData")
@@ -42,6 +58,11 @@ struct SettingsView: View {
                     Text("Settings")
                         .font(.system(size: 50))
                         .bold()
+
+                    
+                    Button(action: { clearLocationRatings(); print("Cleared Ratings Store") })
+                    { Text("Clear Location Ratings") }
+                        .buttonStyle(.bordered)
                     
                     Text("Selected Goal type: \(selection)")
                         .font(.custom("Nunito", size: 20))

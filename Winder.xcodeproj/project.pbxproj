@@ -24,6 +24,7 @@
 		BA89FB452984D2BF002DA24F /* WinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89FB442984D2BF002DA24F /* WinderTests.swift */; };
 		BA89FB4F2984D2BF002DA24F /* WinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89FB4E2984D2BF002DA24F /* WinderUITests.swift */; };
 		BA89FB512984D2BF002DA24F /* WinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89FB502984D2BF002DA24F /* WinderUITestsLaunchTests.swift */; };
+		DAEEEF1D29B580DB009D7587 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEEF1C29B580DB009D7587 /* GuideView.swift */; };
 		EFE2EA462991E3CA00F676B1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE2EA452991E3CA00F676B1 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		BA89FB4A2984D2BF002DA24F /* WinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA89FB4E2984D2BF002DA24F /* WinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinderUITests.swift; sourceTree = "<group>"; };
 		BA89FB502984D2BF002DA24F /* WinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAEEEF1C29B580DB009D7587 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		EFE2EA452991E3CA00F676B1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				BA40449B29A831C400825B9A /* WalkView.swift */,
 				BA40449D29A831CE00825B9A /* ActivityView.swift */,
 				BA54CCDF299B159100031A76 /* SettingsView.swift */,
+				DAEEEF1C29B580DB009D7587 /* GuideView.swift */,
 				BA40449F29A83E4A00825B9A /* LocationManager.swift */,
 				BA89FB372984D2BF002DA24F /* Assets.xcassets */,
 				BA40449729A82D5700825B9A /* Persistence.swift */,
@@ -300,6 +303,7 @@
 				BA40449C29A831C400825B9A /* WalkView.swift in Sources */,
 				BA54E3C629959355002D54DD /* Model.xcdatamodeld in Sources */,
 				BA4044A029A83E4A00825B9A /* LocationManager.swift in Sources */,
+				DAEEEF1D29B580DB009D7587 /* GuideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
