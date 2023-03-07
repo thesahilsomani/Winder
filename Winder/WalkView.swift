@@ -226,6 +226,16 @@ struct WalkView : View
             VStack {
                 GuideView(destCoords: $destCoords)
                 Text("Navigating To: " + destinationName + "\n")
+                Button(action: {
+                    let latitude = destCoords.latitude
+                    let longitude = destCoords.longitude
+                    let url = URL(string: "maps://?saddr=&daddr=\(latitude),\(longitude)")
+                    if UIApplication.shared.canOpenURL(url!) {
+                          UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+                    }
+                })
+                { Text("Open in Apple Maps") }
+                    .buttonStyle(.bordered)
                 Button(action: { self.subPageIndex = (self.subPageIndex + 1) % 4 })
                 { Text("Done With Walk") }
                     .buttonStyle(.bordered)
