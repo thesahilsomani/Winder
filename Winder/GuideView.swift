@@ -39,6 +39,7 @@ struct GuideView : View
             })
             .disabled(directions.isEmpty)
             .padding()
+            .buttonStyle(.bordered)
         }
         .onAppear(perform: self.setCurrentRegion)
         .sheet(isPresented: $showDirections, content: {

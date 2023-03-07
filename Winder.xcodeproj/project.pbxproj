@@ -129,8 +129,8 @@
 				BA54CCDF299B159100031A76 /* SettingsView.swift */,
 				DAEEEF1C29B580DB009D7587 /* GuideView.swift */,
 				BA40449F29A83E4A00825B9A /* LocationManager.swift */,
-				BA89FB372984D2BF002DA24F /* Assets.xcassets */,
 				BA40449729A82D5700825B9A /* Persistence.swift */,
+				BA89FB372984D2BF002DA24F /* Assets.xcassets */,
 				BA89FB392984D2BF002DA24F /* Preview Content */,
 				BA54CCE1299B18F200031A76 /* Settings.bundle */,
 			);

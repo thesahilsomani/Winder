@@ -9,9 +9,9 @@ struct SettingsView: View {
     
     
     @Environment(\.managedObjectContext) private var viewContext
-    @State private var selection = "Miles"
+    @State private var selection = "Steps"
     @State private var enteredText = ""
-    let goalTypes = ["Miles", "Kilometers", "Steps"]
+    let goalTypes = ["Steps", "Miles", "Kilometers"]
     
     func clearLocationRatings() -> Void {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Destination")
