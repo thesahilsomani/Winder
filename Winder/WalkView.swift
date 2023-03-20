@@ -200,6 +200,8 @@ struct WalkView : View
     var body: some View {
         if (subPageIndex == 0) {
             VStack {
+                Text("Time for a Walk?\n")
+                    .font(.system(size: 36, weight:.heavy))
                 Button(action: { self.subPageIndex = (self.subPageIndex + 1) % 4 })
                 { Text("Find Walks!") }
                     .buttonStyle(.bordered)
@@ -207,7 +209,7 @@ struct WalkView : View
         } else if (subPageIndex == 1) {
             
             List {
-                ForEach(destinations/*.prefix(3)*/, id: \.self) { loc in
+                ForEach(destinations.prefix(3), id: \.self) { loc in
                     VStack {
                         Button(action: {
                             destinationName = loc.name!
@@ -216,7 +218,8 @@ struct WalkView : View
                                 longitude: loc.placemark.location!.coordinate.longitude
                             )
                             self.subPageIndex = (self.subPageIndex + 1) % 4
-                        }) { Text(loc.name! + ",  Rating: " + String(locationRating(name: loc.name!))) }
+                        //}) { Text(loc.name! + ",  Rating: " + String(locationRating(name: loc.name!))) }
+                        }) { Text(loc.name!) }
                     }
                 }
             }.task {

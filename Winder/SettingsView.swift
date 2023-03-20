@@ -51,18 +51,12 @@ struct SettingsView: View {
     
     var body: some View {
         ZStack {
-            CustomColor.customLightBlue
+            //CustomColor.customLightBlue
             VStack {
                 VStack {
-                    
-                    Text("Settings")
-                        .font(.system(size: 50))
-                        .bold()
-
-                    
-                    Button(action: { clearLocationRatings(); print("Cleared Ratings Store") })
-                    { Text("Clear Location Ratings") }
-                        .buttonStyle(.bordered)
+                    Text("Preferences")
+                        .font(.system(size: 36, weight:.heavy))
+                    Text("\n")
                     
                     Text("Selected Goal type: \(selection)")
                         .font(.custom("Nunito", size: 20))
@@ -78,22 +72,27 @@ struct SettingsView: View {
                     
                     TextField(text: $enteredText) {
                         Text("Enter a move goal")
-                            .foregroundColor(.white)
+                            //.foregroundColor(.white)
                     }
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.white, lineWidth: 2)
+                            .stroke(lineWidth: 2)
                     )
                     .onSubmit {
                         self.setStepGoal(goal: Int32(enteredText) ?? -1)
                     }
-                    
+                    //Divider()
+                    Text("\n\n")
+                    Text("\n\n")
+                    Text("\n\n")
+                    Button(action: { clearLocationRatings(); print("Cleared Ratings Store") })
+                    { Text("Clear Saved Walk Ratings") }
+                        .buttonStyle(.bordered)
                 }
                 .frame(width: nil, height: nil)
-                .foregroundColor(.white)
+                //.foregroundColor(.white)
                 .padding(.horizontal, 30)
-                
                 Spacer()
                 .ignoresSafeArea()
             }

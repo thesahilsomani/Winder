@@ -49,13 +49,31 @@ struct ActivityView : View
     var body: some View
     {
         VStack {
-            Text("Track Miles and Calories")
-            Text("Step Goal: " + String(stepGoal))
-                .onAppear { self.getStepGoal() }
-            Text("Current Step Count: " + String(currentStepCount))
-                .onAppear { self.updateStepCount() }
-            Text("Current Steps Left: " + String(stepGoal - Int32(currentStepCount)))
-            
+            Text("Your Activity\n")
+                .font(.system(size: 36, weight:.heavy))
+            ZStack {
+                VStack {
+                    Text("Step Goal: " + String(stepGoal))
+                        .onAppear { self.getStepGoal() }
+                    Text("Current Step Count: " + String(currentStepCount))
+                        .onAppear { self.updateStepCount() }
+                    Text("Current Steps Left: " + String(stepGoal - Int32(currentStepCount)))
+                }
+                Circle()
+                    .stroke(
+                        Color.blue.opacity(0.5),
+                        lineWidth: 30
+                    )
+                    .frame(width: 300, height: 300)
+                Circle()
+                    .trim(from: 0, to: (Double(currentStepCount)/Double(stepGoal)))
+                    .stroke(
+                        Color.blue,
+                        lineWidth: 30
+                    )
+                    .frame(width: 300, height: 300)
+                    .rotationEffect(.degrees(-90))
+            }
         }
     }
 }
